@@ -5,38 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Um jogo de pikachu">
   <title>Pokemon</title>
+  <link rel="shortcut icon" href="./assets/favicon.png" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="arena">
-    <div id="squirtle">
-      <div id="opponent-health-bar">
-        <div min="0" max="100" value="100" id="opponent-health"></div>
+    <div class="arena__battle">
+      <div id="squirtle">
+        <div>
+          <div class="pokemon-info">
+            <p id="opponent-name"></p>
+            <p id="opponent-level"></p>
+          </div>
+          <div id="opponent-health-bar">
+            <div min="0" max="100" value="100" id="opponent-health"></div>
+          </div>
+        </div>
+
+        <img id="squirtle__image" src="assets/squirtle.gif" alt="Squirtle">
+        
+        <div class="grass"></div>
+        <div id="opponent-exp-bar">
+          <div min="0" max="100" value="0" id="opponent-exp"></div>
+        </div>
       </div>
-      <img src="assets/squirtle.gif" alt="Squirtle">
-      <div class="grass"></div>
-    </div>
-    <div id="pikachu">
-      <div id="player-health-bar">
-        <div min="0" max="100" value="100" id="player-health"></div>
+      <div id="pikachu">
+        <div class="pokemon-info">
+          <p id="player-name"></p>
+          <p id="player-level"></p>
+        </div>
+        <div id="player-health-bar">
+          <div min="0" max="100" value="100" id="player-health"></div>
+        </div>
+        <img id="pikachu__image" src="assets/pikachu.gif" alt="Pikachu">
+        <div class="grass"></div>
+        <div id="player-exp-bar">
+          <div min="0" max="100" value="0" id="player-exp"></div>
+        </div>
       </div>
-      <img src="assets/pikachu.gif" alt="Pikachu">
-      <div class="grass"></div>
     </div>
+ 
     <div id="options">
       <div class="row">
-        <button id="thunder-shock-button">
+        <button id="ataque1" onclick="pikachuAttack(this.id)">
           Thunder Shock
         </button>
-        <button id="quick-attack-button">
+        <button id="ataque2" onclick="pikachuAttack(this.id)">
           Quick Attack
         </button>
       </div>
       <div class="row">
-        <button id="thunder-button">
+        <button id="ataque3" onclick="pikachuAttack(this.id)">
           Thunder
         </button>
-        <button id="submission-button">
+        <button id="ataque4" onclick="pikachuAttack(this.id)">
           Submission
         </button>
       </div>
